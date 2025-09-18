@@ -1,0 +1,122 @@
+""" Write a program that asks the user grade for math, science, and english scores. 
+Calculate the average grade and determine the letter grade based on the following rule:
+A: average >= 90
+B: 80 <= average < 90
+C: 70 <= average < 80
+D: 60 <= average < 70
+F: average < 60"""
+
+
+math_grade = int(input("Please enter your Math grade: "))
+science_grade = int(input("Please enter your Science grade: "))
+english_grade = int(input("Please enter your English grade: "))
+average = (math_grade+science_grade+english_grade)/3
+
+if average >= 90:
+    average_grade = "A"
+elif 80 <= average < 90:
+    average_grade = "B"
+elif 70 <= average < 80:
+    average_grade = "C"
+elif 60 <= average < 70:
+    average_grade = "D"
+else:
+    average_grade = "F"
+
+print("Your average grade is: ", average_grade)
+
+"""BMI Calculator
+
+Create a program that asks the user for weight (in kilograms) and height (in meters). 
+The program then should calculate the BMI using the formula:
+
+BMI = weight / (height * height)
+
+Determine the BMI category based on the calculated value:
+
+Underweight: BMI < 18.5
+
+Normal: 18.5 <= BMI < 25
+
+Overweight: 25 <= BMI < 30
+
+Obese: BMI >= 30
+
+print the BMI."""
+
+weight = float(input ("Please enter your weight in kg: "))
+height = float(input("Please enter your height in m: "))
+
+BMI = weight / (height * height)
+
+if BMI < 18.5:
+    category = "Underweight"
+elif 18.5 <= BMI < 25:
+    category = "Normal"
+elif 25 <= BMI < 30:
+    category = "Overweight"
+else:
+    category = "Obese"
+
+print ("Your BMI is: ", BMI, ". Your category is: ", category, ".")
+
+"""Triangle Classifier
+
+Create variables for three side lengths of a triangle. 
+Determine the type of triangle based on the side lengths:
+
+Equilateral: all sides are equal
+
+Isosceles: two sides are equal
+
+Scalene: no sides are equal"""
+
+a = float(input("Enter side a in cm: "))
+b = float(input("Enter side b in cm: "))
+c = float(input("Enter side c in cm: "))
+
+if a == b and b == c:
+    type = "Equilateral"
+elif a==b or b==c or c==a:
+    type = "Iscoceles"
+else:
+    type = "Scalene"
+
+print ("Your triangle type is: ", type, ".")
+
+user_number = int(input("Please enter an integer: "))
+if user_number%2 == 0:
+    number_type = "Even"
+else:
+    number_type = "Odd"
+
+print ("Your number is: ", number_type)
+
+# You are given the following list:
+
+students = ["alex", "jhon", "peter", "emma", "daniel", "sophia", "liam", "ava", "noah", "mia"]
+
+
+# Task 1 - print the name of the last student in the list
+# Task 2 - how many students are there in the list ?
+# Task 3 - replace "emma" with "Sam"
+# Task 4 - remove "mia" from the list
+# Task 5 - create another list with the first two students from the list
+
+
+count_of_names_in_list = len(students)
+#Task1
+print ("The last name of the list is: students[(count_of_names_in_list-1)]")
+#Task2
+print ("The list has ", count_of_names_in_list, " students.")
+#Task3
+students[3] = "Sam"
+#Task4
+students.remove("mia")
+
+new_list = [students[0], students[1]]
+print(new_list)
+
+
+
+
